@@ -1,0 +1,18 @@
+.gameBoard{
+    width: 260px;
+    height: 190px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cell{
+    border: solid 1px black;
+    width: 30px;
+    height: 30px;
+    margin: 2px;
+}
+
+.play-again{
+    bottom: 150px;
+    position: fixed;
+}
