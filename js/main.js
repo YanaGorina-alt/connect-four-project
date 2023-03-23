@@ -14,7 +14,8 @@
     const playerID = document.querySelector('.player-id');
     let player = 1; // player one will start the game
     const result = document.querySelector('.update-result'); // to display result
-    const playButton = document.querySelector('.play')
+    const playButton = document.querySelector('.play');
+    const playAgain = document.querySelector('.play-again');
     let occupiedCells = 0;
     let winningPatterns = [ 
         [41, 40, 39, 38], 
@@ -95,13 +96,14 @@ document.addEventListener('DOMContentLoaded', loadGame)
                 }
             }if(count === 4){
                 console.log(result);
-                result.innerHTML = (`Congratulations ${currentPlayer} you WON! If you want to play again, please click play button.`);
-
+                result.innerHTML = (`Congratulations ${currentPlayer} you WON!`);
+                playAgain.style.display = "flex";
                 count = 0;
             }
         }
         if(updateBoard === 42){
-            result.innerHTML = "There is no available cells to put disk. If you want to play again, please click play button."
+            result.innerHTML = "There is no available cells to put disk."
+            playAgain.style.display = "flex";
         }
 
     }
