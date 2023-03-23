@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', loadGame)
     function makeGameBoard(){
         for(let i= 0; i < 42; i++){
             let cell = document.createElement('div');
-            cell.setAttribute('id',i);
+            //cell.setAttribute('id',i);
             cell.className = 'cell';
             gameBoard.appendChild(cell);
         }
@@ -101,7 +101,7 @@ document.addEventListener('DOMContentLoaded', loadGame)
                 count = 0;
             }
         }
-        if(updateBoard === 42){
+        if(occupiedCells === 42){
             result.innerHTML = "There is no available cells to put disk."
             playAgain.style.display = "flex";
         }
@@ -134,6 +134,7 @@ document.addEventListener('DOMContentLoaded', loadGame)
 
     playButton.addEventListener('click', ()=> {
         gameBoard.innerHTML = '';
+        playAgain,style.display = "none";
         player = 1;
         result.innerHTML = '';
         loadGame();
