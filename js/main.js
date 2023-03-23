@@ -17,6 +17,7 @@
     const playButton = document.querySelector('.play');
     const playAgain = document.querySelector('.play-again');
     let occupiedCells = 0;
+    let gameOver  = false;
     let winningPatterns = [ 
         [41, 40, 39, 38], 
         [34, 33, 32, 31], [14, 15, 16, 17], [27, 26, 25, 24], 
@@ -99,9 +100,12 @@ document.addEventListener('DOMContentLoaded', loadGame)
                 result.innerHTML = (`Congratulations ${currentPlayer} you WON!`);
                 playAgain.style.display = "flex";
                 count = 0;
+                gameOver = true;
+                console.log(gameOver);
+                break;
             }
         }
-        if(occupiedCells === 42){
+        if(occupiedCells === 42 && !gameOver){
             result.innerHTML = "There is no available cells to put disk."
             playAgain.style.display = "flex";
         }
@@ -137,6 +141,8 @@ document.addEventListener('DOMContentLoaded', loadGame)
         playAgain.style.display = "none";
         player = 1;
         result.innerHTML = '';
+        occupiedCells = 0;
+        gameOver = false;
         loadGame();
 
     });
