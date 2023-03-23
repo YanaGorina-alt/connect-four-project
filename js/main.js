@@ -134,7 +134,7 @@ document.addEventListener('DOMContentLoaded', loadGame)
 
     playButton.addEventListener('click', ()=> {
         gameBoard.innerHTML = '';
-        playAgain,style.display = "none";
+        playAgain.style.display = "none";
         player = 1;
         result.innerHTML = '';
         loadGame();
