@@ -8,7 +8,7 @@ INSTALLATION
 Clone the repository to your local machine:
 bash
 Copy code
-git clone https://github.com/YanaGorina-alt/connect-four-project
+git clone https://yanagorina-alt.github.io/connect-four-project/
 Open the index.html file in your web browser.
 
 USAGE
